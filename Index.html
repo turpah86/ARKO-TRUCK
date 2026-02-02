@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Arko-Truck | Запчасти Якутск</title>
+ <style>
+ :root {
+ --bg-main: #121212; /* Очень темный фон */
+ --bg-card: #1e1e1e; /* Темнее, чем фон */
+ --primary: #ff5722; /* Яркий оранжевый акцент */
+ --text-color: #e0e0e0;
+ --text-light: #aaa;
+ }
+ body { 
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+ background-color: var(--bg-main);
+ margin: 0; padding: 0; color: var(--text-color); 
+ display: flex; justify-content: center;
+ }
+ .phone-frame {
+ max-width: 480px; width: 100%; min-height: 10vh;
+ background-color: var(--bg-main);
+ padding-bottom: 40px;
+ }
+ header {
+ text-align: center;
+ padding: 30px 20px 20px;
+ background: linear-gradient(180deg, #2a2a2a, var(--bg-main));
+ border-bottom: 3px solid var(--primary);
+ }
+ .logo-img {
+ max-width: 90%;
+ height: auto;
+ margin-bottom: 10px;
+ filter: invert(100%); /* Делаем логотип белым на темном фоне */
+ }
+ h1 { margin: 0; font-size: 26px; font-weight: 700; color: #fff; }
+ h3 { color: var(--primary); margin-top: 0; margin-bottom: 15px; }
+ .brands-line { font-size: 14px; font-weight: 400; opacity: 0.8; margin-top: 5px; }
+ .content { padding: 0 20px; margin-top: 20px; }
+ .card {
+ background: var(--bg-card);
+ border-radius: 12px;
+ padding: 20px;
+ margin-bottom: 20px;
+ box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+ border-left: 4px solid var(--primary);
+ }
+ .btn {
+ display: flex; align-items: center; justify-content: center;
+ text-decoration: none; color: white; padding: 18px;
+ margin-bottom: 12px; border-radius: 8px; font-weight: bold;
+ font-size: 16px; transition: 0.2s;
+ }
+ .btn-call { background-color: var(--primary); } 
+ .btn-wa { background-color: #25d366; } 
+ .btn-group { background-color: #007bb5; } 
+ .btn-2gis { background-color: #ff5630; }
+ 
+ .btn:hover { opacity: 0.9; }
+ .badge {
+ display: inline-block; background-color: var(--primary);
+ padding: 5px 12px; border-radius: 15px;
+ font-size: 12px; font-weight: bold; margin-bottom: 15px;
+ color: white;
+ }
+ /* Новые стили для слайдера */
+ .slider-container {
+    display: flex;
+    overflow-x: scroll; /* Разрешает горизонтальную прокрутку */
+    scroll-snap-type: x mandatory; /* Делает прокрутку плавной */
+    -webkit-overflow-scrolling: touch; /* Улучшает прокрутку на iOS */
+    border-radius: 8px;
+}
+
+.slider-img {
+    flex-shrink: 0; /* Запрещает изображению сжиматься */
+    width: 100%; /* Каждое изображение занимает всю ширину контейнера */
+    height: auto;
+    scroll-snap-align: start; /* Привязывает начало изображения к началу контейнера */
+    border-radius: 8px;
+}
+ .footer-info { text-align: center; color: #777; font-size: 12px; margin-top: 30px; line-height: 1.5; }
+ p { margin: 0 0 10px 0; }
+ ul { text-align: left; padding-left: 20px; margin-bottom: 0; color: var(--text-light); }
+ li { margin-bottom: 5px; }
+ </style>
+</head>
+<body>
+<div class="phone-frame">
+ <header>
+ <img src="https://sun9-40.userapi.com/s/v1/ig2/sQe98jredZIGXYft5ejdNi6WXp6iBtYthcrbP4TQ7c0oUECew33fU6ZTvQNX5A8YZMZm5akPZI7d24uobYwneeI_.jpg?quality=95&as=32x12,48x17,72x26,108x39,160x58,240x87,360x130,480x174,540x195,640x231,720x260,1080x391,1280x463&from=bu&cs=1280x0" alt="Arko-Truck Logo" class="logo-img">
+ <h1>ARKO-TRUCK</h1>
+ <div class="brands-line">FAW • HOWO • SITRAK • SHACMAN / SHAANXI</div>
+ </header>
+
+ <!-- ССЫЛКИ ДЛЯ НАВИГАЦИИ -->
+ <div class="nav-links" style="text-align: center; padding: 10px 0; background-color: var(--bg-card);">
+     <a href="#assortment" style="color: var(--primary); text-decoration: none; margin: 0 10px; font-weight: bold;">АССОРТИМЕНТ</a>
+          <a href="#about" style="color: var(--primary); text-decoration: none; margin: 0 10px; font-weight: bold;">О НАС</a>
+	<a href="#work" style="color: var(--primary); text-decoration: none; margin: 0 10px; font-weight: bold;">РЕЖИМ РАБОТЫ</a>
+     <a href="#contact" style="color: var(--primary); text-decoration: none; margin: 0 10px; font-weight: bold;">КОНТАКТЫ</a>
+ </div>
+ <!-- КОНЕЦ ССЫЛОК -->
+
+ <!-- БЛОК С ФОТОГРАФИЯМИ ВИТРИНЫ (СЛАЙДЕР) -->
+ <div class="card">
+  <div class="slider-container">
+ <img src="https://sun9-26.userapi.com/s/v1/ig2/v4Gb7JnNZRUgYqBEo-NGSbKHydCu819Xb2iLMBDosoxi8tQGttvF-uU4BQsLJCIMDuboj-Ep_grvodzwAn1-IeAO.jpg?quality=95&as=32x26,48x39,72x58,108x87,160x128,240x193,360x289,480x385,540x433,640x514,720x578,1080x867,1200x963&from=bu&cs=1200x0" alt="Фото витрины магазина Arko-Truck" class="slider-img">
+     <img src="https://sun9-75.userapi.com/s/v1/ig2/0zOYxP3Nibhuu-EN48y1nJo_zoxR952qUH0APvji-qt5Ts5K5URcICqUSrufB0m266Qe9949y0jDF1Cf4BpSHcjL.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,1600x1200&from=bu&cs=1600x0" alt="Фото витрины магазина Arko-Truck" class="slider-img">
+    <img src="https://sun9-45.userapi.com/s/v1/ig2/2cDUF9udG_eLlwTdGe5c_yF9-z51l0mYqkvORK-3oseLDe887BXGa49JFBu5iXQDfvBeO6oEVCUnkByxb4euYIki.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1600x900&from=bu&cs=1600x0" alt="Фото витрины магазина Arko-Truck" class="slider-img">
+ <img src="
+https://sun9-14.userapi.com/s/v1/ig2/_c8ErIGOPmk44-vJkfKAn29uxd6BkyZdX-vYS9iyqyx6snOolLFXw-mJAz65VyEe7GE24LN5EJ2_wRHKNgOd2EVr.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,1600x1200&from=bu&cs=1600x0" alt="Фото витрины магазина Arko-Truck" class="slider-img">
+  </div>
+</div>
+
+ <!-- РАЗДЕЛ АССОРТИМЕНТ С ID -->
+ <div class="card" id="assortment">
+ <div class="badge">АССОРТИМЕНТ</div>
+ <h3>Всегда в наличии на складе:</h3>
+ <ul>
+ <li>**Расходники** (фильтры, масла, ремни, прокладки)</li>
+ <li>**Тормозная система** (колодки, диски, суппорты)</li>
+ <li>**Ходовая часть** (пневмоподушки, рессоры, амортизаторы)</li>
+ <li>**Запчасти на двигатели и КПП**</li>
+ <li>**Электрика** и датчики</li>
+ </ul>
+ </div>
+
+ <!-- РАЗДЕЛ О НАС С ID -->
+ <div class="card" id="about">
+ <div class="badge">О НАС</div>
+ <p><strong>Arko-Truck</strong> — ваш надежный поставщик запчастей для китайских грузовых авто. Мы специализируемся на FAW, HOWO, SITRAK, SHACMAN и держим самые востребованные позиции в наличии, чтобы ваш бизнес не простаивал.</p>
+ <p>🚛 **Отправка в районы Якутии** любой ТК или попутным транспортом в день обращения!</p>
+ </div>
+
+<!-- РАЗДЕЛ РЕЖИМ РАБОТЫ С ID -->
+ <div class="card" id="work">
+<div class="badge">РЕЖИМ РАБОТЫ:</div>
+ <ul>
+ <li>Понедельник: 10:00-18:00</li>
+ <li>Вторник: 10:00-18:00</li>
+ <li>Среда: 10:00-18:00</li>
+ <li>Четверг: 10:00-18:00</li>
+ <li>Пятница: 10:00-18:00</li>
+ <li>Суббота: 10:00-16:00</li>
+ <li>Воскресенье - выходной</li>
+ </ul>
+ </div>
+
+ <!-- РАЗДЕЛ С АДРЕСОМ И КОНТАКТАМИ С ID -->
+ <div class="card" id="contact">
+ <a href="tel:+79141047040" class="btn btn-call">📞 Позвонить сейчас</a>
+ <a href="whatsapp://send?phone=79141047040" class="btn btn-wa">💬 Написать в WhatsApp</a>
+ <a href="https://chat.whatsapp.com/K166FDCBDtbLVdyzRcCZmT?mode=gi_t" class="btn btn-group">🤝 Вступить в сообщество</a>
+ <p style="color: var(--text-color);">📍 **Адрес:** г. Якутск, ул. Чернышевского, 99/3</p>
+ <a href="https://2gis.ru/yakutsk/geo/70000001087645898" class="btn btn-2gis">🗺 Открыть в 2ГИС</a>
+ </div>
+ <div class="footer-info">
+ 🏢 Работаем с физлицами и организациями. Предоставляем полный пакет документов (НДС).<br>
+ © 2026 Arko-Truck Yakutsk
+ </div>
+ </div>
+</div>
+
+<!-- Скрипт для автоматического перелистывания -->
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const containers = document.querySelectorAll('.slider-container');
+        
+        containers.forEach(container => {
+            setInterval(() => {
+                const scrollAmount = container.clientWidth; // Ширина одного изображения
+                if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+                    // Если дошли до конца, возвращаемся к началу
+                    container.scrollTo({
+                        left: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    // Перелистываем на следующее изображение
+                    container.scrollBy({
+                        left: scrollAmount,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 3000); // Перелистывание каждые 3 секунды
+        });
+    });
+</script>
+
+</body>
+</html>
