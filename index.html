@@ -1,195 +1,168 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Arko-Truck | Запчасти Якутск</title>
- <style>
- :root {
- --bg-main: #121212; /* Очень темный фон */
- --bg-card: #1e1e1e; /* Темнее, чем фон */
- --primary: #ff5722; /* Яркий оранжевый акцент */
- --text-color: #e0e0e0;
- --text-light: #aaa;
- }
- body { 
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
- background-color: var(--bg-main);
- margin: 0; padding: 0; color: var(--text-color); 
- display: flex; justify-content: center;
- }
- .phone-frame {
- max-width: 480px; width: 100%; min-height: 10vh;
- background-color: var(--bg-main);
- padding-bottom: 40px;
- }
- header {
- text-align: center;
- padding: 30px 20px 20px;
- background: linear-gradient(180deg, #2a2a2a, var(--bg-main));
- border-bottom: 3px solid var(--primary);
- }
- .logo-img {
- max-width: 90%;
- height: auto;
- margin-bottom: 10px;
- filter: invert(100%); /* Делаем логотип белым на темном фоне */
- }
- h1 { margin: 0; font-size: 26px; font-weight: 700; color: #fff; }
- h3 { color: var(--primary); margin-top: 0; margin-bottom: 15px; }
- .brands-line { font-size: 14px; font-weight: 400; opacity: 0.8; margin-top: 5px; }
- .content { padding: 0 20px; margin-top: 20px; }
- .card {
- background: var(--bg-card);
- border-radius: 12px;
- padding: 20px;
- margin-bottom: 20px;
- box-shadow: 0 4px 15px rgba(0,0,0,0.3);
- border-left: 4px solid var(--primary);
- }
- .btn {
- display: flex; align-items: center; justify-content: center;
- text-decoration: none; color: white; padding: 18px;
- margin-bottom: 12px; border-radius: 8px; font-weight: bold;
- font-size: 16px; transition: 0.2s;
- }
- .btn-call { background-color: var(--primary); } 
- .btn-wa { background-color: #25d366; } 
- .btn-group { background-color: #007bb5; } 
- .btn-2gis { background-color: #ff5630; }
- 
- .btn:hover { opacity: 0.9; }
- .badge {
- display: inline-block; background-color: var(--primary);
- padding: 5px 12px; border-radius: 15px;
- font-size: 12px; font-weight: bold; margin-bottom: 15px;
- color: white;
- }
- /* Новые стили для слайдера */
- .slider-container {
-    display: flex;
-    overflow-x: scroll; /* Разрешает горизонтальную прокрутку */
-    scroll-snap-type: x mandatory; /* Делает прокрутку плавной */
-    -webkit-overflow-scrolling: touch; /* Улучшает прокрутку на iOS */
-    border-radius: 8px;
-}
-
-.slider-img {
-    flex-shrink: 0; /* Запрещает изображению сжиматься */
-    width: 100%; /* Каждое изображение занимает всю ширину контейнера */
-    height: auto;
-    scroll-snap-align: start; /* Привязывает начало изображения к началу контейнера */
-    border-radius: 8px;
-}
- .footer-info { text-align: center; color: #777; font-size: 12px; margin-top: 30px; line-height: 1.5; }
- p { margin: 0 0 10px 0; }
- ul { text-align: left; padding-left: 20px; margin-bottom: 0; color: var(--text-light); }
- li { margin-bottom: 5px; }
- </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arko-Truck — Запчасти для китайских грузовиков FAW, HOWO, SITRAK, SHACMAN</title>
+    <!-- Иконки Font Awesome (надежная ссылка) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+    <!-- Стили -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Библиотека для маски телефона -->
+    <script src="https://unpkg.com"></script>
 </head>
 <body>
-<div class="phone-frame">
- <header>
- <img src="https://sun9-40.userapi.com/s/v1/ig2/sQe98jredZIGXYft5ejdNi6WXp6iBtYthcrbP4TQ7c0oUECew33fU6ZTvQNX5A8YZMZm5akPZI7d24uobYwneeI_.jpg?quality=95&as=32x12,48x17,72x26,108x39,160x58,240x87,360x130,480x174,540x195,640x231,720x260,1080x391,1280x463&from=bu&cs=1280x0" alt="Arko-Truck Logo" class="logo-img">
- <h1>ARKO-TRUCK</h1>
- <div class="brands-line">FAW • HOWO • SITRAK • SHACMAN / SHAANXI</div>
- </header>
 
- <!-- ССЫЛКИ ДЛЯ НАВИГАЦИИ -->
- <div class="nav-links" style="text-align: center; padding: 10px 0; background-color: var(--bg-card);">
-     <a href="#assortment" style="color: var(--primary); text-decoration: none; margin: 0 10px; font-weight: bold;">АССОРТИМЕНТ</a>
-          <a href="#about" style="color: var(--primary); text-decoration: none; margin: 0 10px; font-weight: bold;">О НАС</a>
-	<a href="#work" style="color: var(--primary); text-decoration: none; margin: 0 10px; font-weight: bold;">РЕЖИМ РАБОТЫ</a>
-     <a href="#contact" style="color: var(--primary); text-decoration: none; margin: 0 10px; font-weight: bold;">КОНТАКТЫ</a>
- </div>
- <!-- КОНЕЦ ССЫЛОК -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Arko-Truck Logo">
+        </div>
+        <div class="header-contacts">
+            <span class="work-time">Пн-Пт: 10:00-18:00, Сб: 10:00-16:00, Вс - выходной</span>
+            <a href="tel:+79141047040" class="phone-num">+7 (914) 104-70-40</a>
+        </div>
+    </header>
 
- <!-- БЛОК С ФОТОГРАФИЯМИ ВИТРИНЫ (СЛАЙДЕР) -->
- <div class="card">
-  <div class="slider-container">
- <img src="https://sun9-26.userapi.com/s/v1/ig2/v4Gb7JnNZRUgYqBEo-NGSbKHydCu819Xb2iLMBDosoxi8tQGttvF-uU4BQsLJCIMDuboj-Ep_grvodzwAn1-IeAO.jpg?quality=95&as=32x26,48x39,72x58,108x87,160x128,240x193,360x289,480x385,540x433,640x514,720x578,1080x867,1200x963&from=bu&cs=1200x0" alt="Фото витрины магазина Arko-Truck" class="slider-img">
-     <img src="https://sun9-75.userapi.com/s/v1/ig2/0zOYxP3Nibhuu-EN48y1nJo_zoxR952qUH0APvji-qt5Ts5K5URcICqUSrufB0m266Qe9949y0jDF1Cf4BpSHcjL.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,1600x1200&from=bu&cs=1600x0" alt="Фото витрины магазина Arko-Truck" class="slider-img">
-    <img src="https://sun9-45.userapi.com/s/v1/ig2/2cDUF9udG_eLlwTdGe5c_yF9-z51l0mYqkvORK-3oseLDe887BXGa49JFBu5iXQDfvBeO6oEVCUnkByxb4euYIki.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1600x900&from=bu&cs=1600x0" alt="Фото витрины магазина Arko-Truck" class="slider-img">
- <img src="
-https://sun9-14.userapi.com/s/v1/ig2/_c8ErIGOPmk44-vJkfKAn29uxd6BkyZdX-vYS9iyqyx6snOolLFXw-mJAz65VyEe7GE24LN5EJ2_wRHKNgOd2EVr.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,1600x1200&from=bu&cs=1600x0" alt="Фото витрины магазина Arko-Truck" class="slider-img">
-  </div>
-</div>
+    <div class="brand-strip">
+        <div class="brand-item">FAW</div>
+        <div class="brand-item">HOWO</div>
+        <div class="brand-item">SITRAK</div>
+        <div class="brand-item">SHACMAN / SHAANXI</div>
+    </div>
+    
+    <nav class="main-nav">
+        <a href="#features">О нас</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
 
- <!-- РАЗДЕЛ АССОРТИМЕНТ С ID -->
- <div class="card" id="assortment">
- <div class="badge">АССОРТИМЕНТ</div>
- <h3>Всегда в наличии на складе:</h3>
- <ul>
- <li>**Расходники** (фильтры, масла, ремни, прокладки)</li>
- <li>**Тормозная система** (колодки, диски, суппорты)</li>
- <li>**Ходовая часть** (пневмоподушки, рессоры, амортизаторы)</li>
- <li>**Запчасти на двигатели и КПП**</li>
- <li>**Электрика** и датчики</li>
- </ul>
- </div>
+    <main class="container">
+        <!-- Главный экран -->
+        <section class="bento-grid">
+            <div class="card hero-card">
+                <div class="hero-content">
+                    <h1>Запчасти для китайских грузовиков</h1>
+                    <p>Оригиналы и качественные аналоги в наличии на складе</p>
+                    <div class="hero-badges">
+                        <span><i class="fas fa-check"></i> В наличии</span>
+                        <span><i class="fas fa-truck"></i> Доставка в день заказа</span>
+                    </div>
+                    <a href="#" onclick="sendToWA_Hero(); return false;" class="btn-main">
+                        <i class="fab fa-whatsapp"></i> Узнать наличие
+                    </a>
+                </div>
+            </div>
 
- <!-- РАЗДЕЛ О НАС С ID -->
- <div class="card" id="about">
- <div class="badge">О НАС</div>
- <p><strong>Arko-Truck</strong> — ваш надежный поставщик запчастей для китайских грузовых авто. Мы специализируемся на FAW, HOWO, SITRAK, SHACMAN и держим самые востребованные позиции в наличии, чтобы ваш бизнес не простаивал.</p>
- <p>🚛 **Отправка в районы Якутии** любой ТК или попутным транспортом в день обращения!</p>
- </div>
+            <!-- Категории -->
+            <div class="card category-card engine-bg">
+                <h3>Двигатели</h3>
+                <p>Weichai, Cummins</p>
+            </div>
+            <div class="card category-card chassis-bg">
+                <h3>Ходовая часть</h3>
+                <p>Мосты, подвеска</p>
+            </div>
+            <div class="card category-card kpp-bg">
+                <h3>КПП и Трансмиссия</h3>
+                <p>Fast Gear, ZF</p>
+            </div>
+            <div class="card category-card filters-bg">
+                <h3>Фильтры и ТО</h3>
+                <p>Расходники в наличии</p>
+            </div>
+        </section>
 
-<!-- РАЗДЕЛ РЕЖИМ РАБОТЫ С ID -->
- <div class="card" id="work">
-<div class="badge">РЕЖИМ РАБОТЫ:</div>
- <ul>
- <li>Понедельник: 10:00-18:00</li>
- <li>Вторник: 10:00-18:00</li>
- <li>Среда: 10:00-18:00</li>
- <li>Четверг: 10:00-18:00</li>
- <li>Пятница: 10:00-18:00</li>
- <li>Суббота: 10:00-16:00</li>
- <li>Воскресенье - выходной</li>
- </ul>
- </div>
+        <!-- О нас -->
+        <section class="features" id="features">
+            <div class="feature-item">
+                <i class="fas fa-microchip"></i>
+                <h3>Подбор по VIN</h3>
+                <p>Безошибочно подберем запчасть по каталогам производителя.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-box-open"></i>
+                <h3>Свой склад</h3>
+                <p>Более 5000 наименований для Shacman, FAW и Howo.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-handshake"></i>
+                <h3>Любая форма оплаты</h3>
+                <p>Работаем с НДС и без, предоставляем все документы.</p>
+            </div>
+        </section>
 
- <!-- РАЗДЕЛ С АДРЕСОМ И КОНТАКТАМИ С ID -->
- <div class="card" id="contact">
- <a href="tel:+79141047040" class="btn btn-call">📞 Позвонить сейчас</a>
- <a href="whatsapp://send?phone=79141047040" class="btn btn-wa">💬 Написать в WhatsApp</a>
- <a href="https://chat.whatsapp.com/K166FDCBDtbLVdyzRcCZmT?mode=gi_t" class="btn btn-group">🤝 Вступить в сообщество</a>
- <p style="color: var(--text-color);">📍 **Адрес:** г. Якутск, ул. Чернышевского, 99/3</p>
- <a href="https://2gis.ru/yakutsk/geo/70000001087645898" class="btn btn-2gis">🗺 Открыть в 2ГИС</a>
- </div>
- <div class="footer-info">
- 🏢 Работаем с физлицами и организациями. Предоставляем полный пакет документов (НДС).<br>
- © 2026 Arko-Truck Yakutsk
- </div>
- </div>
-</div>
+        <!-- Контакты -->
+        <section class="request-form" id="contacts">
+            <h2>Не нашли нужную деталь?</h2>
+            <p>Оставьте номер, и эксперт Arko-Truck перезвонит вам за 5 минут</p>
+            <form id="tg-form">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="tel" id="phone-mask" placeholder="+7 (___) ___-__-__" required>
+                <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Отправить заявку</button>
+            </form>
+            <div class="direct-wa">
+                <p>Или пишите напрямую:</p>
+                <a href="https://wa.me" class="wa-link" target="_blank"><i class="fab fa-whatsapp"></i> Написать в WhatsApp</a>
+            </div>
+            
+            <!-- БЛОК СООБЩЕСТВА -->
+            <div class="social-join">
+                <a href="https://chat.whatsapp.com" class="social-link" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Вступить в сообщество
+                </a>
+            </div>
+            <!-- КОНЕЦ БЛОКА СООБЩЕСТВА -->
+        </section>
+    </main>
 
-<!-- Скрипт для автоматического перелистывания -->
-<script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const containers = document.querySelectorAll('.slider-container');
-        
-        containers.forEach(container => {
-            setInterval(() => {
-                const scrollAmount = container.clientWidth; // Ширина одного изображения
-                if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
-                    // Если дошли до конца, возвращаемся к началу
-                    container.scrollTo({
-                        left: 0,
-                        behavior: 'smooth'
-                    });
-                } else {
-                    // Перелистываем на следующее изображение
-                    container.scrollBy({
-                        left: scrollAmount,
-                        behavior: 'smooth'
-                    });
-                }
-            }, 3000); // Перелистывание каждые 3 секунды
+    <footer class="footer">
+        <p>&copy; 2025 Arko-Truck. Продажа запчастей для спецтехники из Китая.</p>
+    </footer>
+
+    <!-- Плавающая кнопка WhatsApp с встроенной SVG-иконкой -->
+    <a href="https://wa.me" class="float-whatsapp" target="_blank">
+        <svg viewBox="0 0 448 512" fill="currentColor">
+            <path d="M380.9 97.1C339 55.1 283.5 32 223.8 32c-122.4 0-221.7 99.3-221.7 221.7 0 39.5 12.5 77.2 36.2 109. 1.8 2.4 2.8 5.2 2.8 8.1 0 11.6-4.6 23.1-14.8 32.2l-21.5 19.5c-2.3 2.1-3.6 4.9-3.6 7.7 0 7.1 2.9 13.8 8 18.3l110.8 110.8c4.5 4.5 11.2 7.4 18.3 7.4 2.8 0 5.6-1.1 7.7-3.4l19.4-21.5c9.2-10.2 20.8-15 32.4-14.8 2.8 0 5.6 1.1 7.9 3.4 32.7 23.6 70.5 36.1 110.2 36.1 122.4 0 221.7-99.3 221.7-221.7 0-59.3-23.2-114.8-65.1-156.8zm-12.7 296.1c-66.2 0-120-53.8-120-120s53.8-120 120-120 120 53.8 120 120-53.8 120-120 120zm149.3-157.9c1.9-.9 3.5-.9 4.3 0 12.3 5.4 21.6 17.6 22 31.9-.4 2.6-1.1 4.8-1.5 6.4 1.3 4.2.9 8.2-1.2 12.1-2.4 4.8-6.1 8.8-10.8 11.4-1.2.6-2.5 1.5-3.8 2.5 10.3 3.5 17.5 13 18.3 24.2.7 11.4-7.2 21.5-18 25.4-3.1 1.2-5.4 3.7-6.2 6.6-4 14.1-18.4 24.2-34 23.4-14.2-.7-26.6-10.9-32-24.9-1-.3-1.8-.7-2.6-1.1-.9.4-1.9.8-3.1 1.1-11.7 3.5-23.9 3.8-35.8.6-2.9-.8-5.3-1.6-7.5-1.6-1.3 0-2.4.3-3.2.7-3.8 1.8-7.2 4-10.5 6.5-11.6 8.9-25 15.3-39.7 18.4-15.6 3.1-31.8 2.6-47-.5-4-.8-8.1-1.3-12-1.3-11.3 0-21.5 4.3-28.7 11.2-1.7 1.6-2.8 3.8-3.3 6.3-.5 2.5-.2 5 .8 7.3 5.6 12 11.4 24 17.3 36.1 1.2 2.5 1.7 5.2 1.3 7.9-.5 4.2-2.3 8-5.1 11.1l-19.5 21.5c-6.8 7.5-18.5 7.8-25.7.9L58 371.3c-2.4-2.2-3.8-5.2-3.8-8.3 0-2.8 1.1-5.6 3.3-7.7 23.6-21.6 36.1-50.6 36.1-80.9 0-41.2-16-79.9-43.1-108.8-1.1-1.2-2.1-2.3-3.2-3.4 3.3-4 6.7-7.2 10.3-9.9 29.5-22.3 62.4-34.1 96.1-34.1 36.2 0 71 12.3 98.7 35.8 2.2 1.8 4.2 4.1 6 6.5 14.2-1.9 28.5-1.9 42.6 0 2.2-2.9 4.8-5.3 7.8-7.1 27.6-23.7 62.6-36.2 99-36.2 38.3 0 74.3 15.8 101.4 43.1 1.1 1.1 2.2 2.2 3.2 3.2 28.2 28.2 43.1 65 43.1 104.9 0 40.5-15.7 78.4-43.1 106.3-1.1 1.1-2 2.1-3 3 1.3 4 2 8.4 2 12.9.1 2.3-.3 4.6-.9 6.8-1.3 4.2-3.5 8-6.4 11.1-1.8 1.9-3.8 3.5-5.9 4.8 10 3.5 17 12.8 17.8 24.1.7 11.4-7.1 21.6-17.8 25.5-3.1 1.1-5.4 3.6-6.2 6.5-4 14.1-18.4 24.2-34 23.4-14.2-.8-26.6-11-32.1-25-.8-.2-1.6-.5-2.4-.9-.8.4-1.9.8-3.1 1.1-11.7 3.5-23.9 3.8-35.8.6-2.9-.8-5.3-1.6-7.5-1.6-1.3 0-2.4.3-3.2.7-3.8 1.8-7.2 4-10.5 6.5-11.6 8.9-25 15.3-39.7 18.4-15.6 3.1-31.8 2.6-47-.5-4-.8-8.1-1.3-12-1.3-11.3 0-21.5 4.3-28.7 11.2-1.7 1.6-2.8 3.8-3.3 6.3-.5 2.5-.2 5 .8 7.3 5.6 12 11.4 24 17.3 36.1 1.2 2.5 1.7 5.2 1.3 7.9-.4 4.2-2.3 8-5.1 11.1l-19.5 21.5c-6.8 7.5-18.5 7.8-25.7.9-23.5-21.5-36-50.4-36-80.7.1-41.2 16.1-79.9 43.2-108.8 1.1-1.2 2.1-2.3 3.2-3.4zm-146.9-93c1.1 1.2 2.2 2.3 3.2 3.4 27.1 28.9 43.1 67.6 43.1 108.8 0 30.3-12.5 59.2-36 80.7l-25.7 23.5c-3.8 3.5-9.4 3.7-13.4.4-4-3.3-4.4-8.8-1-12.8 24.3-27.8 37.6-61.4 37.6-96.4.1-34.9-13.3-68.4-37.6-96.2-3.4-3.9-3-9.5 1.1-12.8 4-.3 10-.1 13.4 3.3z"></path>
+        </svg>
+    </a>
+
+    <!-- Скрипты -->
+    <script>
+        window.addEventListener('load', function() {
+            // Маска телефона
+            var pInput = document.getElementById('phone-mask');
+            if (pInput && typeof IMask !== 'undefined') {
+                IMask(pInput, { mask: '+{7} (000) 000-00-00' });
+            }
+
+            // Функция для кнопки "Узнать наличие" (на главном экране)
+            window.sendToWA_Hero = function() {
+                var n = document.querySelector('input[placeholder="Ваше имя"]');
+                var name = n ? n.value : "Клиент";
+                
+                var domain = "https://api." + "whatsapp" + ".com";
+                var path = "/send?phone=" + "79141047040";
+                var msg = "&text=" + encodeURIComponent("Здравствуйте! Хочу узнать наличие запчастей. Имя клиента: " + name);
+                
+                window.location.href = domain + path + msg;
+            };
+            
+            // Функция для кнопки "Отправить заявку" (в форме контактов)
+            var f = document.getElementById('tg-form');
+            if (f) {
+                f.onsubmit = function(e) {
+                    e.preventDefault();
+                    
+                    var n = f.querySelector('input[placeholder="Ваше имя"]').value;
+                    var p = document.getElementById('phone-mask').value;
+                    
+                    var domain = "https://api." + "whatsapp" + ".com";
+                    var path = "/send?phone=" + "79141047040";
+                    var msg = "&text=" + encodeURIComponent("Заявка Arko-Truck. Имя: " + n + ". Тел: " + p);
+                    
+                    window.location.href = domain + path + msg;
+                };
+            }
         });
-    });
-</script>
-
+    </script>
 </body>
 </html>
-
