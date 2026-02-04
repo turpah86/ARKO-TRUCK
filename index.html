@@ -85,35 +85,31 @@
             </div>
         </section>
 <style>
-  .custom-2gis-container {
-    display: flex;
-    flex-direction: row; /* В ряд на ПК */
-    flex-wrap: wrap;     /* Перенос на мобильных */
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
+  /* Общий контейнер */
+  .main-2gis-wrapper {
+    display: block;      /* Переключаем на блочный тип */
     width: 100%;
-    max-width: 1200px;   /* Ограничение общей ширины */
-    margin: 0 auto;      /* Центровка всего блока */
+    max-width: 600px;    /* Оптимальная ширина для мобильных и ПК */
+    margin: 0 auto;      /* Центровка на странице */
     padding: 10px;
     box-sizing: border-box;
   }
 
-  .custom-2gis-container > div {
-    flex: 1 1 400px;    /* Растягиваться, но не быть уже 400px */
-    max-width: 100%;    /* Чтобы не вылезало за экран */
-    min-width: 300px;   /* Минималка для узких телефонов */
+  /* Изолируем каждый виджет */
+  .widget-box {
+    position: relative;  /* Чтобы ничего не вылетало */
+    width: 100% !important;
+    margin-bottom: 30px; /* Отступ между картой и отзывами */
+    clear: both;         /* Сброс обтекания */
+    overflow: hidden;    /* Чтобы отзывы не вылезали за границы */
   }
 
-  /* Адаптация под мобильные */
-  @media (max-width: 768px) {
-    .custom-2gis-container {
-      flex-direction: column; /* На смартфонах строго друг под другом */
-      align-items: center;
-    }
+  /* Заставляем внутренние элементы 2ГИС быть на весь экран */
+  .widget-box iframe, 
+  .widget-box script {
+    width: 100% !important;
   }
 </style>
-
 <div class="custom-2gis-container">
     <!-- Виджет КАРТЫ -->
     <div class="map-widget">
@@ -203,6 +199,7 @@
     </script>
 </body>
 </html>
+
 
 
 
